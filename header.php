@@ -55,7 +55,7 @@
 				effect: 'fade',
 				fadeSpeed: 500,
 				bigTarget: true,
-				play: 7000,
+				play: 8500,
 				pause: 4000,
 				hoverPause: true,
 				start: 1,

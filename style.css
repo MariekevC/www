@@ -490,7 +490,7 @@ a h2{
 		
 }
 #float { 
-    left: 370px;
+    left: 350px;
     top: -83px;
     position:relative;
 }
@@ -502,4 +502,18 @@ ul.menu{
 }
 .page-content h2{
 	font-size: 18px;	
+}
+#demobtn{
+	margin-right: 20px;
+}
+.hero-unit h1{
+	font-size: 50px;
+}
+.page-header p{
+	display: inline;
+	float: right;
+	margin-top: -5px;
+}
+.get-started-btn{
+	margin-right: 20px;
 }
