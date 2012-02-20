@@ -14,6 +14,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" /> 
 	<title><?php
 	/*
 	* Print the <title> tag based on what is being viewed.
@@ -33,6 +34,7 @@
 	</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link href="<?php echo get_template_directory_uri(); ?>/prettify.css" type="text/css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -57,6 +59,7 @@
 				bigTarget: true,
 				play: 8500,
 				pause: 4000,
+				bigTarget: true,
 				hoverPause: true,
 				start: 1,
 				animationComplete: function(current){
