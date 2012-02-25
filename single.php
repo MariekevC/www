@@ -7,6 +7,7 @@ while ( have_posts() ) : the_post();
 		<h1><?php the_title(); ?> <small><?php the_date(); ?></small></h1>
 	</a>
 </div> 
+<a href="/blog/"><- Back to blog</a>
 <?php 
 the_content();
 endwhile; // end of the loop. 
