@@ -18,8 +18,10 @@ if( is_syndicated() && !is_null( get_feed_meta('face') ) ){
 		<div class="span12 post-header">			
 <?php
 }
+$target = is_syndicated() ? ' target="_blank"': '';
+$link = is_syndicated() ? get_syndication_permalink() : get_permalink();
 ?>
-		<a href="<?php if( is_syndicated() ){ the_syndication_permalink(); }else{ the_permalink(); } ?>"><h2><?php the_title(); ?></h2></a>
+		<a href="<?php echo $link; ?>"<?php echo $target; ?>><h2><?php the_title(); ?></h2></a>
 		<small>Posted on
 		<?php the_date(); ?> by <?php the_author(); ?>
 		<?php if( is_syndicated() ){

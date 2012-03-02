@@ -85,8 +85,8 @@ function ilc_register_sidebars(){
         'description' => 'Column of widgets',
         'before_title' => '<h4>',
         'after_title' => '</h4>',
-        'before_widget' => '<div class="row"><div class="span4">',
-        'after_widget' => '</div></div>'
+        'before_widget' => '',
+        'after_widget' => ''
     ));
 }
 
