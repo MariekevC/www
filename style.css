@@ -527,3 +527,6 @@ ul.menu{
 .post {
 	margin-top: 8px;
 }
+.post-header span.label{
+	margin-left: 5px;	
+}

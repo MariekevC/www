@@ -29,6 +29,14 @@ $link = is_syndicated() ? get_syndication_permalink() : get_permalink();
 		}
 		?>
 		</small>
+		<?php 
+		$tags = get_the_tags();
+		if($tags){
+			foreach( $tags as $tag ){
+				echo '<span class="label">'.$tag->name.'</span>';	
+			}
+		}
+		?>
 	</div>
 </div>
 <div class="row">
