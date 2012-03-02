@@ -525,8 +525,20 @@ ul.menu{
 	margin-right: -7px;
 }
 .post {
-	margin-top: 8px;
+	color: #2C2C2C;
+}
+.post-header{
+	margin-bottom: 20px;	
 }
 .post-header span.label{
 	margin-left: 5px;	
+}
+.post-header small{
+	color: gray;	
+}
+.post p{
+	text-align: justify;	
+}
+.post hr{
+	margin-top: 2px;	
 }
