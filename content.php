@@ -10,12 +10,12 @@ if( is_syndicated() && !is_null( get_feed_meta('face') ) ){
 			</li>
 		</ul>
 	</div>
-	<div class="span10 post-header">
+	<div class="span14 post-header">
 	<?php
 } else {
 	?>
 	<div class="row">	
-		<div class="span12 post-header">			
+		<div class="span16 post-header">			
 <?php
 }
 $target = is_syndicated() ? ' target="_blank"': '';
@@ -40,8 +40,8 @@ $link = is_syndicated() ? get_syndication_permalink() : get_permalink();
 	</div>
 </div>
 <div class="row">
-	<div class="span12 post">
-		<?php  the_content(); ?>
+	<div class="span16 post">
+		<?php the_content(); ?>
 		<hr />
 	</div>
 </div>

@@ -6,7 +6,7 @@ if( is_blog() ){ ?>
 	<h1>Development Blog</h1>
 </div>
 <div class="row">
-	<div class="span12">
+	<div class="span16">
 <?php
 }
 
@@ -22,13 +22,6 @@ endwhile;
 
 $wp_query = null; $wp_query = $temp;?>
 
-	</div>
-	<div class="span4">
-		<div class="sidebar">
-			<div class="well">
-	<?php dynamic_sidebar('Blog widgets'); ?>
-			</div>
-		</div>
 	</div>
 </div>
 <?php get_footer(); ?>
