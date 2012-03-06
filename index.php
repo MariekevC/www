@@ -4,6 +4,10 @@ get_header();
 if( is_blog() ){ ?>
 <div class="page-header">
 	<h1>Development Blog</h1>
+	<form role="search" method="get" class="headersearch" id="searchform" action="<?php echo home_url( '/' ); ?>">
+	    	<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
+	        <input type="submit" id="searchsubmit" class="btn" value="Search" />
+	</form>
 </div>
 <div class="row">
 	<div class="span16">
