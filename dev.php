@@ -6,7 +6,7 @@ Template Name: Developer Centre
 
 <?php get_header(); ?>
 
-<div class="page-header"><a href="<?php echo get_bloginfo(); ?>/dev/"><h1>Developer Centre</h1></a>
+<div class="page-header"><h1><a href="<?php echo home_url( '/' ); ?>/dev/">Developer Centre</a></h1>
 	<form role="search" method="get" class="headersearch" id="searchform" action="<?php echo home_url( '/' ); ?>">
 	    	<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
 	        <input type="submit" id="searchsubmit" class="btn" value="Search" />
