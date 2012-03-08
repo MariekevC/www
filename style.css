@@ -527,8 +527,14 @@ ul.menu{
 .post {
 	color: #2C2C2C;
 }
+.post-indent{
+	margin-left: 110px !important;
+}
 .post-header{
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
+}
+.post-header-indent{
+	margin-left: -10px !important;	
 }
 .post-header span.label{
 	margin-left: 5px;	
@@ -541,4 +547,10 @@ ul.menu{
 }
 .post hr{
 	margin-top: 2px;	
+}
+.post-info{
+	margin-top: 5px;	
+}
+.page-header h1 a:hover{
+	text-decoration: underline;	
 }
