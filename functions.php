@@ -80,14 +80,6 @@ function ilc_register_sidebars(){
         'before_widget' => '<div class="span6">',
         'after_widget' => '</div>'
     ));
-    register_sidebar(array(
-        'name' => 'Blog widgets',
-        'description' => 'Column of widgets',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-        'before_widget' => '',
-        'after_widget' => ''
-    ));
 }
 
 // TODO FIXME
