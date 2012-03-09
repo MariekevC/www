@@ -1,10 +1,13 @@
 <?php
+// Get the post user email
+$user = get_post( $post_id, $output )->post_author;
+$useremail = get_userdata($user)->user_email;
+$gravmail = is_null(get_feed_meta('gravatar')) ? $useremail : get_feed_meta('gravatar');
+$img = get_gravatar($gravmail,'60');
+// Compute link
 $target = is_syndicated() ? ' target="_blank"': '';
 $link = is_syndicated() ? get_syndication_permalink() : get_permalink();
 $title = is_syndicated() ? get_syndication_source() : get_the_title();
-$img = get_gravatar(reset(get_feed_meta($post->ID,'gravatar')),'60');
-$target = is_syndicated() ? ' target="_blank"': '';
-$link = is_syndicated() ? get_syndication_permalink() : get_permalink();
 ?> 
 <div class="row">	
 	<div class="span2">
