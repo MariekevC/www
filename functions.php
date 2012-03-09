@@ -226,7 +226,7 @@ function get_the_tags_html($postid){
 		foreach( $tags as $tag ){
 			if(strtolower($tag->name)!='owncloud'){
 				$colour = array_key_exists($tag->name,$tagcolours) ? $tagcolours[$tag->name] : '';
-				$output .= '<span class="label '.$colour.'">'.$tag->name.'</span>';	
+				$output .= '<a href="'.get_tag_link($tag).'"><span class="label '.$colour.'">'.$tag->name.'</span></a>';	
 			}
 		}
 		return $output;
