@@ -13,21 +13,19 @@ if( is_blog() ){ ?>
 	<div class="span16">
 <?php
 }
-// The loop
-$temp = $wp_query;
-$wp_query= null;
-$wp_query = new WP_Query();
-$wp_query->query('posts_per_page=5'.'&paged='.$paged);
+// The Query
+query_posts( array( 'posts_per_page' => get_option( 'posts_per_page' ), 'paged' => get_query_var('paged') ) );
 
-while ($wp_query->have_posts()) : $wp_query->the_post();
-	get_template_part( 'content', get_post_format() );
+// The Loop
+while ( have_posts() ) : the_post();
+		get_template_part( 'content', get_post_format() );
 endwhile;
 
-$wp_query = null; $wp_query = $temp;
 ?>
-
 	</div>
 </div>
-<?php next_posts_link(); ?>
-
-<?php get_footer(); ?>
+<div class="blogpagination old"><?php echo next_posts_link('&larr; Older blogs'); ?></div>
+<div class="blogpagination new"><?php echo previous_posts_link('Newer blogs &rarr;'); ?></div>
+<?php
+get_footer(); 
+?>

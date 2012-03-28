@@ -561,3 +561,12 @@ ul.menu{
 .post-info a:hover{
 	text-decoration: none;	
 }
+.blogpagination{
+	margin-top: -8px;	
+}
+.blogpagination.new{
+	float: right;	
+}
+.blogpagination.old{
+	float: left;	
+}
