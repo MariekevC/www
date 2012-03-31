@@ -79,7 +79,7 @@
 	<div class="topbar">
 		<div class="fill">
 			<div class="container">
-				<a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo home_url( '/' ); ?>/wp-content/themes/owncloudorg/images/logo.png" alt="ownCloud Logo"></a>
+				<a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo home_url( '/' ); ?>/wp-content/themes/<?php echo get_current_theme(); ?>/images/logo.png" alt="ownCloud Logo"></a>
 				<ul class="nav" style="float: right">
 					<?php wp_nav_menu( array( 'menu' => 'header-menu', 'depth' => '1' ) ); ?>
 				</ul>

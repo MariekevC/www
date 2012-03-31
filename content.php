@@ -5,7 +5,7 @@ $useremail = get_userdata($user)->user_email;
 // Check if icon has been uploaded
 if( file_exists( 'wp-content/themes/owncloudorg/images/icons/' . $useremail . '.png' ) ){
 	// Use this as icon
-	$imgurl = home_url( '/' ) . 'wp-content/themes/owncloudorg/images/icons/' . $useremail . '.png';	
+	$imgurl = home_url( '/' ) . 'wp-content/themes/' . get_current_theme() . '/images/icons/' . $useremail . '.png';	
 } else {
 	// Try gravatar
 	// Specified email?
