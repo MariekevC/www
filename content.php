@@ -2,8 +2,17 @@
 // Get the post user email
 $user = get_post( $post_id, $output )->post_author;
 $useremail = get_userdata($user)->user_email;
-$gravmail = is_null(get_feed_meta('gravatar')) ? $useremail : get_feed_meta('gravatar');
-$img = get_gravatar($gravmail,'60');
+// Check if icon has been uploaded
+if( file_exists( 'wp-content/themes/owncloudorg/images/icons/' . $useremail . '.png' ) ){
+	// Use this as icon
+	$imgurl = home_url( '/' ) . 'wp-content/themes/owncloudorg/images/icons/' . $useremail . '.png';	
+} else {
+	// Try gravatar
+	// Specified email?
+	$gravmail = get_feed_meta('email');
+	// Try specified email, else default to blog email, else show default image
+	$imgurl = get_gravatar( $gravmail, '60', get_gravatar( $useremail, '60' ) );	
+}
 // Compute link
 $target = is_syndicated() ? ' target="_blank"': '';
 $link = is_syndicated() ? get_syndication_permalink() : get_permalink();
@@ -13,7 +22,7 @@ $title = is_syndicated() ? get_syndication_source() : get_the_title();
 	<div class="span2">
 		<ul class="media-grid">
 			<li>
-				<a href="#"><img class="thumbnail" src="<?php echo $img; ?>" alt="<?php echo $title; ?>"></a>
+				<a href="#"><img class="thumbnail" src="<?php echo $imgurl; ?>" alt="<?php echo $title; ?>"></a>
 			</li>
 		</ul>
 	</div>
