@@ -14,7 +14,7 @@ Template Name: Developer Centre
 </div>
 
 <div class="row">
-	<div class="span4">
+	<div class="span3">
 		<div class="sidebar">
 			<div class="well">
 			<?php 
@@ -25,10 +25,18 @@ Template Name: Developer Centre
 	</div>
 	
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
-
-	<div class="span12">
+<?php
+$title = get_the_title();
+?>
+	<div class="span9">
+<?php
+if( $title != 'Dev' ){
+?>
 		<h1><?php the_title();?></h1>
 		<hr class="pagetitle">
+<?php 
+}
+?>
 		<div class="page-content">
 			<?php the_content(); ?>
 		</div>

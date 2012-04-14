@@ -14,7 +14,7 @@ Template Name: Support Centre
 </div>
 
 <div class="row">
-	<div class="span4">
+	<div class="span3">
 		<div class="sidebar">
 			<div class="well">
 			<?php 
@@ -26,7 +26,7 @@ Template Name: Support Centre
 	
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 
-	<div class="span12">
+	<div class="span9">
 		<h1><?php the_title();?></h1>
 		<hr class="pagetitle">
 		<div class="page-content">

@@ -1,8 +1,4 @@
-		<footer>
-			<hr>
-			<small>&#169; ownCloud <?php echo date('Y');?></small>
-		</footer>
-	</div>
+</div>
 <!-- Piwik -->
 <script type="text/javascript">
 var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo.owncloud.org/stats/" : "http://demo.owncloud.org/stats/");

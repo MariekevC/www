@@ -37,7 +37,7 @@ function ilc_register_sidebars(){
         'description' => 'one large widget',
         'before_title' => '<h2>',
         'after_title' => '</h2>',
-        'before_widget' => '<div class="span12">',
+        'before_widget' => '<div class="span9">',
         'after_widget' => '</div>'
     ));
     register_sidebar(array(
@@ -45,7 +45,7 @@ function ilc_register_sidebars(){
         'description' => 'one large widget',
         'before_title' => '<h2>',
         'after_title' => '</h2>',
-        'before_widget' => '<div class="span12">',
+        'before_widget' => '<div class="span9">',
         'after_widget' => '</div>'
     ));
     register_sidebar(array(
@@ -56,14 +56,6 @@ function ilc_register_sidebars(){
         'before_widget' => '<div class="span6">',
         'after_widget' => '</div>'
     ));
-    register_sidebar(array(
-		'name' => 'Home Footer',
-		'description' => '3 column widgets for homepage',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-		'before_widget' => '<div class="span-one-third">',
-		'after_widget' => '</div>')
-	);
  	register_sidebar(array(
         'name' => 'Support Top Widgets',
         'description' => 'two widgets',
@@ -112,24 +104,6 @@ function neat_trim($str, $n, $delim='...') {
        return $str;
    }
 }
-
-
-// Highlight the dev page if a subpage of dev is active
-// TODO FIX THIS
-/*
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class($classes, $item){
-	global $post;
-	$ancestors = get_post_ancestors($post->ID);
-	foreach($ancestors as $ancestor){
-		if(get_the_title($ancestor) == "")
-	}
-     //echo $item->ID;
-    // var_dump(get_post_ancestors($item->ID));
-   //  return array('active');
-   return $classes;
-}
-*/
 
 //allow shortocodes in widgets
 add_filter('widget_text', 'do_shortcode');

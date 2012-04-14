@@ -37,54 +37,26 @@
 	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link href="<?php echo get_template_directory_uri(); ?>/prettify.css" type="text/css" rel="stylesheet" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/prettify.js"></script>
-
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-	<![endif]-->
-	<?php if(is_page('Home')){ ?>
-	<script src="<?php echo get_template_directory_uri(); ?>/slides.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$('#slides .slide').width('820');
-		$('.slides_container').fadeIn('slow');
-	});
-		$(function(){
-			// Initialize Slides
-			$('#slides').slides({
-				generatePagination: false,
-				effect: 'fade',
-				fadeSpeed: 500,
-				bigTarget: true,
-				play: 8500,
-				pause: 4000,
-				bigTarget: true,
-				hoverPause: true,
-				start: 1,
-				animationComplete: function(current){
-					$('#bannericons li a').removeClass("active");
-					$('#icon'+current).addClass("active");
-				}
-			});
-		});
-	</script>
-	<?php 
-	}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="<?php echo get_template_directory_uri();?>/custom.js"></script>
+	<?php
 	wp_head(); 
 	?>
 </head>
 
 <body onload="prettyPrint()" <?php body_class(); ?>>
-	<div class="topbar">
-		<div class="fill">
-			<div class="container">
-				<a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo home_url( '/' ); ?>/wp-content/themes/<?php echo get_current_theme(); ?>/images/logo.png" alt="ownCloud Logo"></a>
-				<ul class="nav" style="float: right">
-					<?php wp_nav_menu( array( 'menu' => 'header-menu', 'depth' => '1' ) ); ?>
-				</ul>
-			</div>
-		</div>
-	</div>
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+<?php if(!is_front_page()){ ?>          
+<a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo home_url( '/' ); ?>/wp-content/themes/<?php echo get_current_theme(); ?>/images/logo.png" alt="ownCloud Logo"></a>
+<?php } ?>
+          <div class="nav-collapse">
+              <?php wp_nav_menu( array( 'menu' => 'header-menu', 'depth' => '1', 'menu_class' => 'nav' ) ); ?>
+		<a href="http://demo.owncloud.org" class="btn btn-success nav-btn">Try it out!</a>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 	<div class="container">
 		<div class="content">

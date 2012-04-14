@@ -15,6 +15,7 @@ if($post->post_type=="post"){
 } 
 
 // Content
-echo str_ireplace(get_search_query(),'<strong>'.get_search_query().'</strong>',neat_trim(strip_shortcodes(get_the_content()),400));
-
+if (empty($post->post_password)) { // there is no password
+	echo str_ireplace(get_search_query(),'<strong>'.get_search_query().'</strong>',neat_trim(strip_shortcodes(get_the_content()),400));
+}
 ?>

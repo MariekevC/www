@@ -24,6 +24,13 @@ else :
 </div>
 <?php 
 endif;
+?>
+<hr />
+<div class="row">
+<?php
 dynamic_sidebar('Home-Footer');
+?>
+</div>
+<?php
 get_footer(); 
 ?>
